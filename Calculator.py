@@ -5,17 +5,17 @@ class Calculator:
         self.root = root
         self.root.title("Calculia")
         self.root.geometry("578x655+400+100")
-        self.root.config(bg= '#513068')
+        self.root.config(bg= '#292E36')
         self.root.iconbitmap('calculator.ico')
 
 
 
-        self.MainFrame = Frame(self.root, bd= 18, width= 600, height= 670, relief= RIDGE, bg= '#775093')
+        self.MainFrame = Frame(self.root, bd= 18, width= 600, height= 670, relief= RIDGE, bg= '#414957')
         self.MainFrame.grid()
-        self.WidgetFrame = Frame(self.MainFrame, bd= 18, width= 590, height= 660, relief= RIDGE, bg= '#513068')
+        self.WidgetFrame = Frame(self.MainFrame, bd= 18, width= 590, height= 660, relief= RIDGE, bg= '#292E36')
         self.WidgetFrame.grid()
 
-        self.lblDisplay = Label(self.WidgetFrame, width=30, height=2, bg= 'white', font=('Times New Roman',20,'bold'), anchor='e')
+        self.lblDisplay = Label(self.WidgetFrame, width=30, height=2, bg= '#DDDDDD', font=('Times New Roman',20,'bold'), anchor='e')
         self.lblDisplay.grid(row= 0, column= 0, columnspan= 4, padx= 10, pady= 10)
 
         self.input_button = ""
@@ -48,7 +48,7 @@ class Calculator:
 
     
     def create_button(self, text, row, column):
-        btnWidget = Button(self.WidgetFrame, text=text, width=6, height=2, bd= 4,bg= '#775093', font=('Times New Roman',20,'bold'), command=lambda: self.button_click(text))
+        btnWidget = Button(self.WidgetFrame, text=text, width=6, height=2, bd= 4,bg= '#414957', font=('Times New Roman',20,'bold'), command=lambda: self.button_click(text))
         btnWidget.grid(row= row, column= column, padx= 5,pady= 5)
 
     
